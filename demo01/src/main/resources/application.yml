@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: localhost
+    
+--- 
+spring:
+  profiles: localhost
+  datasource:
+    url: jdbc:mysql://localhost/testdb?useSSL=false
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+
+--- 
+spring:
+  profiles: docker
+  datasource:
+    url: jdbc:mysql://mysql/testdb?useSSL=false
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+
+--- 
+spring:
+  profiles: docker-aws
+  datasource:
+    url: jdbc:mysql://instance-mysql.cgznz0uwf8wt.ap-northeast-1.rds.amazonaws.com/testdb?useUnicode=true&characterEncoding=utf8
+    username: oujyunsen
+    password: oujyunsen217
+  jpa:
+    show-sql: true

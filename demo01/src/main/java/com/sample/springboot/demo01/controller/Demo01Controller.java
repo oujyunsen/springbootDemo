@@ -10,6 +10,7 @@ public class Demo01Controller {
   @RequestMapping(name="/version", method=RequestMethod.GET)
   public String getVersion() {
     return "v01";
+
   }
 
 }
